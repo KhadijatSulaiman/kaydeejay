@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kay`s Mart</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body id="home">
+
+	<!-- nav section - This section defines the markup for the navigation -->
+	<nav class="navbar navbar-expand-sm fixed-top">
+		<div class="container">
+			<a href="index.html" class="navbar-brand"><em>Kay's Mart </em><i class="fa fa-shopping-cart"></i></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Categories</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Contact us</a>
+				</li>
+				<li class="nav-item">
+					<a href="login.html" class="nav-link">Login</a>
+				</li>
+				<li class="nav-item">
+					<a href="#search" class="nav-link"><i class="fa fa-search"></i></a>
+				</li>
+			</ul>
+		</div>
+		</div>	
+	</nav>
+	<script type="text/javascript">
+
+	//Collects all images
+
+	var allImages = ["shp10.jpg","shp11.jpg","retailers2.jpg","shp12.jpg","shp5.jpeg","Shops.jpeg"];
+			
+	//starting position
+	var index = 0;
+
+	//Timing the slider
+	var handleTiming = setInterval(slider, 2000);
+
+	//Handles sliding effect
+	function slider(){
+		//GETS THE ID OF THE DEFAULT IMAGE
+		var def = document.getElementById("def");
+	    def.setAttribute("src", allImages[index]);
+	    index++;
+	    if( index > allImages.length - 1){
+	        index = 0;
+	    }
+	}
+
+
+	</script>
+
+	<!-- Home section -->
+	<header id="home-section">
+		<div class="dark-overlay">
+			<div class="dark-overlay">
+				<div class="home-inner-shops">
+					<div class="container my-auto">
+						<section id="shopdetals">
+							<div class="container">
+								<div class="row py-1">
+									<div class="col text-center py-2" >
+										<h3 class="display-4"> Shop Details</h3>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			<div class="row">
+				<div class="row justify-content-start">
+					<div class="col lg-5 my-3">
+						<div class="shopD">
+							<img src="shp10.jpg" alt="Shop" id="def">
+						</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="col lg-5 my-3">
+						<p> TYPE:          Wholesale Shop</p>
+						<br>
+						<p> PRICE:         N150.000</p>
+						<br>
+						<p> STAUS:         Available</p>
+						<form class="form">
+							<div>
+								<textarea placeholder="Add a coment" rows="5" cols="25"></textarea>
+							</div><br>
+							<div>
+								<a href="make.html" class="btn btn-outline-primary align-right">SEND</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<footer class="foot fixed-bottom">
+       	<span class="logo">Kay's Mart &copy; 2019</span>	
+       	<img class="img1" src="f.svg">
+       	<img class="img2" src="g.svg">       	
+       	<img class="img3" src="i.svg">
+		<img class="img4" src="t.svg">
+	</footer>
+	</body>
+</html>
